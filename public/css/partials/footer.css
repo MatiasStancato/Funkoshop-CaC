@@ -1,11 +1,27 @@
-/* FOOTER */
-
-.footer {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-68);
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; 
 }
 
-.footer__copy {
-    margin-top: var(--spacing-36);
-    text-align: center;
+.footerConteiner{
+    background-color: #30343F;
+    height: 343px;
+    display:flex;
+    flex-direction:column;
+}
+
+.navbar__item li{
+    list-style: none;
+    margin: 5px 0;
+    
+}
+
+
+.footerText{
+    color:#fff;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
 }

@@ -1,0 +1,38 @@
+<%-include("../partials/header")%>
+<main class="registerMain">
+<body>
+    <div class="registerContainer">
+        <h2 class="registerTitle">CREA TU CUENTA</h2>
+        <h3 class="registerSubTitle">Completa el formulario para ser parte del mundo de los funkos</h3>
+        <div class="registerForm">
+            <div class="formContainer">
+                <label class="form__labelreg" for="name">Nombre:</label>
+                <input class="form__inputreg" type="text" name="name" id="name" placeholder="Nombre" required>
+            </div>
+            <div class="formContainer">
+                <label class="form__labelreg" for="name">Apellido:</label>
+                <input class="form__inputreg" type="text" name="name" id="name" placeholder="Apellido" required>
+            </div>
+            <div class="formContainer">
+                <label class="form__labelreg" for="name">Email:</label>
+                <input class="form__inputreg" type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="formContainer">
+                <label class="form__labelreg" for="password">Contraseña:</label>
+                <input class="form__inputreg" type="password" name="password" id="password" placeholder="••••••••••••••" required>
+            </div>
+            <div class="formContainer">
+                <label class="form__labelreg" for="password">Repite Contraseña:</label>
+                <input class="form__inputreg" type="password" name="password" id="password" placeholder="••••••••••••••" required>
+            </div>
+            <div class="formAcceptContainer">
+                <input class="formBottom" type="submit" value="Registrar">
+                <div class="formAccept">
+                    <input type="checkbox" name="" id="">
+                    <label for="">Acepto <a class="formlink" href="">Términos y Condiciones</a></label>
+                </div>
+            </div>
+    </div>
+</body>
+</main>
+<%-include("../partials/footer")%>

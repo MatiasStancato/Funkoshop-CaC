@@ -1,0 +1,31 @@
+<%-include("../partials/header")%>
+<body>
+    <main>
+        <div class="itemcontainer">
+            <section class="itemDetalle">
+                <picture class="pictureDetalle">
+                    <img   class="imgDetalle" src="<%=item.img_front%>" alt="<%=item.img_front%>">
+                </picture>
+                <article class="articleDetalle">
+                    <p class="nombreDetalle"><%=item.licence_name%></p>
+                    <h2 class="tituloDetalle"><%=item.product_name%></h2>
+                    <P class="descriptionDetalle"><%=item.product_description%></P>
+                    <p class="precioDetalle">$ <%=item.product_price%></p>
+                    <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                        <input id="displayDetalle" class="item__input" type="text" name="quantity" placeholder="0">
+                        <button id="displayResta" class="item__quantityResta" type="button">-</button>
+                        <button id="displaySuma" class="item__quantity" type="button">+</button>
+                        <button class="item__submit btn btn--primary btn--medium" type="submit">Agregar al carrito</button>
+                    </form>
+                    <p class="pagoDetalle"><a href="">ver metodos de pago 3</a> -CUOTAS SIN INTERESES</p>
+                </article>
+            </section>
+            <h2 class="sliderTitle">PRODUCTOS RELACIONADOS</h2>
+            <%-include("../partials/plantillaslider")%>
+        </div>
+    </main>
+    <!-- Script para el formulario -->
+    <script src="/js/shopDetail.js"></script>
+</body>
+<%-include("../partials/footer")%>
+</html>

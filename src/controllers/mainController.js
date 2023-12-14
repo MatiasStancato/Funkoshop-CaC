@@ -1,9 +1,21 @@
+const fs = require ("fs")
+const funkoShop = JSON.parse(fs.readFileSync("./data/funko.json","utf-8"))
 
-const mainController = {
-    home:(req,res)=>res.send("Route for Home View"),
-    contact:(req,res)=>res.send("Route for Contact View"),
-    about:(req,res)=>res.send("Route for About View"),
-    faqs:(req,res)=>res.send("Route for Faqs View")
+
+const mainController = 
+{
+    home:(req,res)=>{
+        res.render("home",{title: "Home | Funkshop",funkoShop:funkoShop})
+    },
+    contact:(req,res)=>{
+        res.render("./home/contact",{title: "Contact | Funkshop"})
+    },
+    about:(req,res)=>{
+        res.render("./home/about",{title: "About | Funkshop"})
+    },
+    faqs:(req,res)=>{
+        res.render("./home/faqs",{title: "Faqs | Funkshop"})
+    }
 }
 
 module.exports = mainController

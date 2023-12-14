@@ -1,0 +1,85 @@
+<%-include("../partials/header")%>
+<body>
+    <div class="shopContainer">
+    <aside class ="filterAside">
+        <div class="filters__search">
+            <label  class="filters__title" for="search">BUSCAR</label>
+            <input class="itemocategoria" type="text" name="search" id="search" placeholder="item o categoría">
+        </div>
+        <div class="filters__order">
+            <label  class="filters__title" for="orderby">ORDERNAR POR</label>
+            <select class="itemocategoria" name="orderby" id="orderby">
+                <option value="asc">Menor precio</option>
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="desc">Mayor precio</option>
+            </select>
+        </div>
+        <div class="filters__price">
+            <span class="filters__title" >PRECIO</span>
+            <div>
+                <label  for="min">MIN</label>
+                <input class="min" type="text" name="min" id="min" placeholder="0">
+                <label  for="max">- MAX</label>
+                <input class="max" type="text" name="max" id="max" placeholder="0">
+            </div>
+        </div>
+        <div class="filters__checks">
+            <span class="filters__title" for="filter">FILTRAR</span>
+            <div>
+                <input type="checkbox" name="filter" id="news" value="news">
+                <label class="asideCheckbox" for="">NUEVOS</label>
+            </div>
+            <div>
+                <input type="checkbox" name="filter" id="offers" value="offers">
+                <label class="asideCheckbox" for="">OFERTAS</label>
+            </div>
+            <div>
+                <input type="checkbox" name="filter" id="specials" value="specials">
+                <label class="asideCheckbox" for="">EDICIÓN ESPECIAL</label>
+            </div>
+            <div>
+                <input type="checkbox" name="filter" id="favs" value="favs">
+                <label class="asideCheckbox" for="">FAVORITOS</label>
+            </div>
+        </div>
+    </aside>
+    <main> 
+        <section class="gallerySection">
+        <ul class="galleryContainer">
+        <%funkoShop.forEach(collection2=>{%>
+            <%collection2.collection.forEach(collection3=>{%>
+            <li>
+                <div class="cardFigura">
+                    <a class="cardFiguraLink" href="/shop/item/<%=collection3.id%>">
+                    <p class="cardFiguraNew">NUEVO</p>
+                        <div class="cardFiguraImg">
+                            <img class="cardFiguraImgGallery" src="<%=collection3.img_front%>" alt="LUNA LOVEGOOD figura funko">
+                        </div>
+                        <div class="cardFiguraDescription">
+                            <p class="cardFiguraText"><%=collection3.licence_name%></p>
+                            <h4 class="cardFiguraName"><%=collection3.product_name%></h4>
+                            <p class="cardFiguraPrice">$ <%=collection3.product_price%></p>
+                            <p class="cardFiguraCuotas">3 CUOTAS SIN INTERES</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        <%})%>
+        <%})%>
+        </ul>
+            <div class="paginationContainer">
+                <a class="pagination__link  pagination__linkIcon" href="#" ><</a>
+                <a class="pagination__link pagination__link--selected" href="#" >1</a>
+                <a class="pagination__link" href="#" >2</a>
+                <a class="pagination__link" href="#" >3</a>
+                <a class="pagination__link" href="#" >4</a>
+                <a class="pagination__link" href="#" >5</a>
+                <a class="pagination__link  pagination__linkIcon " href="#" >></a>
+            </div>
+        </section>
+    </main>
+    </div>
+</body>
+<%-include("../partials/footer")%>
+</html>

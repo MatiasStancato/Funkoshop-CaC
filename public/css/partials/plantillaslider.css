@@ -1,0 +1,93 @@
+
+.sliderTitle{
+    font-family: 'Raleway', sans-serif; 
+    font-size: 46px;
+    font-weight: 700;
+    color: #111;
+    position: absolute;
+    left:200px;
+}
+
+.cardFigura{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:359.97px;
+    height: 512px;
+    font-family: 'Inter', sans-serif;
+}
+
+.cardFiguraImg{
+    width: 359px;
+    height: 352px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    padding:  25px 0;
+    box-sizing: border-box;
+}
+.cardFiguraImgFront{
+    position: absolute;
+    width: 352px;
+    height: 304px;
+    object-fit: cover;
+    background-color: #fff;
+    opacity: 1;
+}
+.cardFiguraImgBack{
+    width: 352px;
+    height: 304px;
+    object-fit: cover;
+    background-color: #fff;
+    overflow: hidden;
+    padding:  25px 0;
+    
+}
+.cardFiguraImgFront:hover{
+    opacity: 0;
+}
+
+
+
+.cardFiguraNew{
+    display: inline;
+    align-self: center;
+    background-color: #FF3333;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 14px;
+    text-align: center;
+    list-style: none;
+    position: relative;
+    left: 250px;
+    top:40px;
+    z-index:5;
+}
+.cardFigura a{
+    text-decoration: none;
+}
+.cardFiguraText{
+    font-size: 14px;
+    font-weight: 500;
+    color:#333333
+}
+.cardFiguraName{
+    font-size: 18px;
+    font-weight: 700;
+    color:#111;
+    margin-top:10px;
+}
+.cardFiguraPrice{
+    font-size: 16px;
+    font-weight: 400;
+    color:#333333;
+    margin-top: 10px;
+}
+.cardFiguraCuotas{
+    font-size: 12px;
+    font-weight: 700;
+    color:#1D84B5;
+    margin-top:  10px;
+}
+ 

@@ -1,0 +1,44 @@
+
+
+<section class="slider container glide">
+    <div class="glide__track sliderContainer" data-glide-el="track">
+        <ul class="slider__items glide__slides">
+            <%funkoShop.forEach(collection2=>{%>
+                <%collection2.collection.forEach(collection3=>{%>
+                    <li>
+                                <div class="cardFigura">
+                                    <a class="cardFiguraLink" href="/shop/item/<%=collection3.id%>">
+                                        <p class="cardFiguraNew">NUEVO</p>
+                                        <div class="cardFiguraImg">
+                                            <img class="cardFiguraImgFront" src="<%=collection3.img_front%>" alt="<%=collection3.img_front%>">
+                                            <img class="cardFiguraImgBack" src="<%=collection3.img_back%>" alt="<%=collection3.img_back%>">
+                                        </div>
+                                        <div class="cardFiguraDescription">
+                                        <p class="cardFiguraText"><%=collection3.licence_name%></p>
+                                        <h4 class="cardFiguraName"><%=collection3.product_name%></h4>
+                                        <p class="cardFiguraPrice">$ <%=collection3.product_price%></p>
+                                        <p class="cardFiguraCuotas">3 CUOTAS SIN INTERES</p>
+                                        </div>
+                                    </a>
+                                </div>
+                    </li>
+            </li>
+            <%})%>
+            <%})%>
+        </ul>
+    </div>
+    <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="rotate(90 12 12)"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></g></svg></button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></g></svg></button>
+    </div>
+  </section>
+  
+  <!-- script para carrousel -->
+  <script src="https://unpkg.com/@glidejs/glide"></script> 
+  <script>
+      const config ={
+          type:"carousel",
+          perView: 3
+      }
+      new Glide('.glide',config).mount()
+  </script>

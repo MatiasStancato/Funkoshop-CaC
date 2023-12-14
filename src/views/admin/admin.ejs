@@ -1,0 +1,63 @@
+<%-include("../partials/header")%>
+<body>
+    <main>
+        <div class="adminContainer">
+            <section class="searchAdmin">
+                <img class="logosearchAdmin" src="/img/icons/search_icon.svg" alt="SearchIconAdmin">
+                <input class="searchbarAdmin"type="text" placeholder="codigo,nombre o categoria">
+            </section>
+            <section class="listAdminContainer">
+                <section class="headerAdmin">
+                    <h2 class="titleheaderAdmin">LISTADO DE PRODUCTOS</h2>
+                    <p class="textheaderAdmin">AGREGAR</p>
+                    <p class="iconheaderAdmin">+</p>
+                </section>
+                <article class="titlesAdmin">
+                    <h2 class="idtitleAdmin">ID</h2>
+                    <h2 class="codigotitleAdmin">Codigo</h2>
+                    <h2 class="nombretitleAdmin">Nombre del producto</h2>
+                    <h2 class="categoriatitleAdmin">Categoria</h2>
+                </article>
+                    <section class="listadoAdmin">
+                        <%funkoShop.forEach(collection2=>{%>
+                            <%collection2.collection.forEach(collection3=>{%>
+                            <ul>
+                                <li>
+                                    <p class=""><%=collection3.id%></p>                    
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p class=""><%=collection3.product_sku%></p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p class=""><%=collection3.product_name%></p>
+                                </li>
+                            </ul>
+                                <li>
+                                    <p class=""><%=collection3.licence_name%></p>
+                                </li>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                    <img class="adminIconEdit "src="./img/icons/edit_pencil.svg" alt="IconPencil">
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                    <img class="adminIconDelete" src="./img/icons/delete_trash.svg" alt="IconDelete">
+                                    </a>
+                                </li>
+                            </ul>
+                            <%})%>
+                        <%})%>
+                    </section>
+            </section>
+        </div>
+    </main>
+</body>
+<%-include("../partials/footer")%>

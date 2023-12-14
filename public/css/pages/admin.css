@@ -1,73 +1,95 @@
-#admin {
-    margin: var(--spacing-68) auto;
-}
-.admin__search {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-8);
-    margin-bottom: var(--spacing-36);
-}
-
-.admin__icon {
-    font-size: var(--font-xlarge);
-}
-
-.admin__search-bar {
-    font-size: var(--font-medium);
-    padding: var(--spacing-8) var(--spacing-8);
-    border: 2px solid var(--dark-solid);
-    border-radius: 6px;
-    outline: none;
-    flex: 0 0 35%;
-}
-
-.admin__list {
+.listAdminContainer{
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-24);
-}
+    justify-content: center;
+    width: 1126px;
+    height: 928.95;
+    margin: 0 auto;
 
-.admin__header {
+
+}
+.searchAdmin{
+    width: 590.88px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-24);
+    flex-direction: row;
+    align-content: center;
+    margin: 20px 0;
+    position: relative;
+    left: 170px;
+    overflow: hidden;
 }
 
-.admin__header h2 {
-    font-size: var(--font-jumbo) ;
+.logosearchAdmin{
+    height: 42px;
+    width: 42px;
 }
-
-.admin__header span {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-16);
-    font-size: var(--font-large);
+.searchbarAdmin{
+    width: 529.76px;
+}
+.headerAdmin{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+}
+.titleheaderAdmin{
+    font-size: 42px;
+    font-family: 700;
+}
+.textheaderAdmin{
+    font-size:24px;
     font-weight: 700;
+    align-self: center;
+    position: relative;
+    left: 350px;
+}
+.iconheaderAdmin{
+    background-color:#FF3333;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    align-self: center;
+    padding: 0 10px;
+    border-radius: 3px;
+    position: relative;
+    left:420px
 }
 
-.admin__header span a {
+.titlesAdmin{
+    width: 818.77px;
     display: flex;
-    font-size: var(--font-medium);
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.codigotitleAdmin{
+    position: relative;
+    left: 20px;
+}
+.nombretitleAdmin{
+    position: relative;
+    left:60px
+}
+.categoriatitleAdmin{
+    position: relative;
+    left: 15px;
 }
 
-.admin-table {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-16);
-}
-
-.admin-table__header,
-.admin-table__row {
+.listadoAdmin{
     display: grid;
-    grid-template-columns: 40px 1fr 3fr 3fr 40px 40px;
-    align-items: center;
-    gap: var(--spacing-16);
-    font-size: var(--font-medium);
+    grid-template-columns: .5fr .75fr 1fr .75fr .25fr .25fr;
+    margin-bottom: 30px;
+}
+.listadoAdmin li{
+    list-style: none;
+    margin-top: 10px;
+}
+.listadoAdmin p{
+    font-family: 'inter',sans-serif;
     font-weight: 500;
-}
+    font-size: 24px;
 
-.admin-table__header {
-    margin-bottom: var(--spacing-24);
 }
-
+.adminIconEdit,.adminIconDelete{
+    width: 40%;
+    height: 40%;
+}

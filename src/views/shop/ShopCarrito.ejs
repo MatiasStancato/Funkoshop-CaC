@@ -1,0 +1,86 @@
+<%-include("../partials/header")%>
+<body>
+    <main>
+        <div class="cartContainer">
+            <div class="Carritocontainer">
+                <h2 class="tituloCart">CARRITO DE COMPRAS</h2>
+                <section class="detalleCarrito">
+                <div class="headerCarrito">
+                    <p>DETALLE DE PRODUCTO</p>
+                    <P>CANTIDAD</P>
+                    <p>TOTAL</p>
+                </div>
+                <div class="itemCarritoTop">
+                    <section class="detalleProductoItem">
+                        <img class="itemImg" src="/img/star-wars/baby-yoda-1.webp" alt="">
+                        <article>
+                        <h3 class="itemTitle">BABY YODA BLUEBALL</h3>
+                        <p class="itemBrand">STAR WARS</p>
+                        <p class="itemPrice">$ 1799,99</p>
+                        </article>
+                    </section>
+                    <article class="quantityItemTop">
+                        <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                            <input id="displayDetalle" class="displayCart" type="text" name="quantity" placeholder="0">
+                            <button id="displayResta" class="restaCart" type="button">-</button>
+                            <button id="displaySuma" class="sumaCart" type="button">+</button>
+                        </form>
+                    </article>
+                    <article class="totalItemTop">
+                        <p class="priceTotal">$1799,99</p>
+                    </article>
+                    <article class="iconItemTop">
+                        <img src="/img/icons/close-o.svg" alt="">
+                    </article>
+                </div>
+                <div class="itemCarritoBottom">
+                    <section class="detalleProductoItem">
+                        <img class="itemImg" src="/img/pokemon/pidgeotto-1.webp" alt="">
+                        <article>
+                        <h3 class="itemTitle">PIDGEOTTO</h3>
+                        <p class="itemBrand">POKEMON</p>
+                        <p class="itemPrice">$ 1799,99</p>
+                        </article>
+                    </section>
+                    <article class="quantityItemBottom">
+                        <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                            <input id="displayDetalle" class="displayCart" type="text" name="quantity" placeholder="0">
+                            <button id="displayResta" class="restaCart" type="button">-</button>
+                            <button id="displaySuma" class="sumaCart" type="button">+</button>
+                        </form>
+                    </article>
+                    <article class="totalItemBottom">
+                        <p class="priceTotal">$1799,99</p>
+                    </article>
+                    <article class="iconItemBottom">
+                        <img src="/img/icons/close-o.svg" alt="">
+                    </article>
+                </div>
+                <div class="resumenCart">
+                    <h2 class="tituloCartBottom">RESUMEN</h2>
+                    <section class="resumenDetalleCart">
+                        <article>
+                            <p class="resumenText">CANTIDAD DE ELEMENTOS</p>
+                            <p class="resumenText">3</p>
+                        </article>
+                        <article>
+                            <p class="resumenText">SUBTOTAL</p>
+                            <p class="resumenText">$ 5.399,97</p>
+                        </article>
+                        <article>
+                            <p class="resumenText">ENVIO</p>
+                            <p class="resumenText">$ 0,00</p>
+                        </article>
+                        <article class="resumenTotal">
+                            <p class="resumenTextTotal">TOTAL</p>
+                            <p class="resumenTextTotalPrice">$ 5.399,97</p>
+                        </article>
+                    </section>
+                    <a href="#">IR A PAGAR </a>
+            </div>
+        </div>
+    </main>
+</body>
+<%-include("../partials/footer")%>
+</html>
+

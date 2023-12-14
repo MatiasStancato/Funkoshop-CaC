@@ -1,0 +1,75 @@
+<%-include("../partials/header")%>
+<body>
+    <main id="edit" class="editContainer">
+        <h2 class="editTitle">EDITAR ITEM</h2>
+        <form class="create__form" action="/admin/create" method="POST" enctype="multipart/form-data">
+            <div class="topinputContainer">
+                <div class="topinputForm">
+                    <label class="form__label" for="category">Categoría:</label>
+                    <select class="formtopSelect" name="category" id="category" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <option value=""><%=item.category_name%></option>
+                    </select>
+                </div>
+                <div class="topinputForm">
+                    <label class="form__label" for="collection">Licencia:</label>
+                    <select class="formbottomSelect" name="collection" id="collection" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <option value=""><%=item.licence_name%></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form__box--flex">
+                <label class="forminputName" for="name">Nombre del producto:</label>
+                <input class="form__input aa" type="text" name="name" id="name" placeholder="<%=item.product_name%>" required>
+            </div>
+            <div>
+                <textarea name="descriptionCreate" id="description" cols="82" rows="10" placeholder="Descripción del producto" required><%=item.product_description%></textarea>
+            </div>
+            <div class="bottominputForm">
+                <div class="form__box--flex">
+                    <label class="form__labelBottom" for="sku">SKU:</label>
+                    <input class="form__input" type="text" name="sku" id="sku" placeholder="<%=item.product_sku %>" required>
+                </div>
+                <div class="form__box--flex">
+                    <label class="form__labelBottom" for="price">Precio:</label>
+                    <div class="form__input--wrapper"><span>$</span><input class="form__input bb" type="text" name="price" id="price" data-type="currency" placeholder="<%=item.product_price%>"></div>
+                </div>
+                <div class="form__box--flex">
+                    <label class="form__labelBottom" for="stock">Stock:</label>
+                    <div class="form__input--wrapper"><input class="form__input cc" type="text" name="stock" id="stock" placeholder="<%=item.dues%>" required></div>
+                </div>
+            </div>
+            <div class="form__flex">
+                <div class="form__box--flex">
+                    <label class="form__labelBottom" for="discount">Descuento:</label>
+                    <div class="form__input--wrapper"><input class="form__input dd" type="text" name="discount" id="discount" placeholder="0" required><span>%</span></div>
+                </div>
+                <div class="form__box--flex">
+                    <label class="form__labelBottom" for="dues">Cuotas:</label>
+                    <select class="form__select" name="dues" id="dues">
+                        <option value="0">Sin cuotas</option>
+                        <option value="3">3 cuotas s/ interés</option>
+                        <option value="6">6 cuotas s/ interés</option>
+                        <option value="9">9 cuotas s/ interés</option>
+                        <option value="12">12 cuotas s/ interés</option>
+                        <option value="18">18 cuotas s/ interés</option>
+                        <option value="24">24 cuotas s/ interés</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form__box--flex">
+                <label class="form__labelImgBottom" for="images">Imagenes:</label>
+                <input class="inputFile" type="file" name="images" id="img" multiple>
+            </div>
+            <div class="imgEditBottom">
+                <img src="<%=item.img_front%>" alt="<%=item.img_front%>">
+                <img src="<%=item.img_back%>" alt="<%=item.img_back%>">
+            </div>
+            <div class="form__flex">
+                <input class="form__btn btn btn--primary" type="submit" value="Modificar producto">
+            </div>
+        </form>
+    </main>
+</body>
+<%-include("../partials/footer")%>

@@ -1,0 +1,52 @@
+.loginMain{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.loginContainer{
+    height: 289.13px;
+    width: 515px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.loginTitle{
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+.formContainerlog{
+    display: flex;
+
+}
+.formContainerlog input{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    border:0;
+    border-bottom: 2px solid  #FF3333;
+} 
+.formContainerlog label{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+
+}
+.form__labeltop{
+    margin-right:65px
+}
+.IngresarContainer{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.regLink{
+    margin: 10px;
+    text-align: center;
+    color: #1D84B5;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,27 @@
+<%-include("./partials/header")%>
+<body>
+    <section class="banner">
+        <article class="bannerContainer">
+            <h3 class="bannerTitle">Nuevos Ingresos</h3>
+            <p class="bannerText">Descubrí el próximo Funko Pop de tu colección</p>
+            <a class="banberLink" href="/shop">SHOP</a>
+        </article>
+    </section>
+<main class="cointainerMain">
+    <%funkoShop.forEach(collection=>{%>
+        <section class="nuevosIngresos">
+            <article>
+                <h3 class="nuevosIngresosTitulo"><%=collection.collection_id%></h3>
+                <p class="nuevoIngresosText"><%=collection.licence_description%></p>
+                <a class="nuevosIngresosLink" href="/shop">VER COLECCION</a>
+            </article>
+            <picture class="nuevosIngresosImg">
+                <img src="<%=collection.licence_image%>" alt="<%=collection.licence_image%>">
+            </picture>
+        </section>
+        <%})%>
+        <h2 class="sliderTitle">ULTIMOS LANZAMIENTOS</h2>
+        <%-include("./partials/plantillaslider")%>
+</main>
+</body>
+<%-include("./partials/footer")%>

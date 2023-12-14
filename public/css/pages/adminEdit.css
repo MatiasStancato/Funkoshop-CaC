@@ -1,0 +1,19 @@
+.editContainer{
+    width: 827.63px;
+    height: 769.3px;
+    position: relative;
+    left:115.55px;
+}
+.editTitle{
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+.imgEditBottom{
+    display: flex;
+    flex-direction: row;
+}
+.imgEditBottom img{
+    width: 150px;
+    height: 173px;
+}

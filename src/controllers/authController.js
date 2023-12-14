@@ -1,8 +1,12 @@
 
-const authController = {
-    login: (req,res)=>(res.send("Route for Login Route")),
-    register: (req,res)=>(res.send("Route for register Route"))
+const authController = 
+{
+    login: (req,res)=>{
+        res.render("./auth/login",{title:"Login | FunkoShop"})
+    },
+
+    register: (req,res)=>{
+        res.render("./auth/register",{title:"Register | FunkoShop"})
+    },
 }
-
-
 module.exports = authController;
